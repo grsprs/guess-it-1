@@ -1,5 +1,13 @@
 # Docker Testing Guide
 
+## Prerequisites
+
+**Docker Desktop must be running!**
+
+1. Start Docker Desktop
+2. Wait for it to fully start (icon in system tray)
+3. Then run the commands below
+
 ## Quick Start
 
 ### Build and Run
