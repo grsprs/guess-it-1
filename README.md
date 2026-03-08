@@ -161,4 +161,6 @@ go run tester.go nic 1
 
 ## Author
 
-Zone01 Module #585 - Statistical Prediction Exercise
+Spiros Nikoloudakis  
+Zone01 Module #585 - Statistical Prediction Exercise  
+Year: 2026
