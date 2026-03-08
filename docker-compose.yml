@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  student:
+    build: .
+    container_name: guess-it-student
+    volumes:
+      - ./student:/app/student
+      - ./test-data:/app/test-data
+    stdin_open: true
+    tty: true

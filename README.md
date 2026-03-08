@@ -56,24 +56,32 @@ This program reads numbers from standard input and predicts a range `[lower, upp
 ## Project Structure
 
 ```
-guess-it-1-final/
+guess-it-1/
 ├── student/
 │   ├── main.go       # Main program with prediction logic
+│   ├── main_test.go  # Unit tests
 │   └── go.mod        # Go module definition
-├── script.sh         # Execution script for tester
-├── tester.go         # Standalone test program
+├── script.sh         # Execution script
+├── Dockerfile        # Docker image definition (optional)
+├── docker-compose.yml # Docker compose config (optional)
 ├── README.md         # This file
-└── AUDIT.md          # Audit guidelines
+├── AUDIT.md          # Audit guidelines
+└── SUBMISSION.md     # Submission guide
 ```
 
 ## Requirements
 
+### Minimum (Required)
 - Go 1.21 or higher
-- No external dependencies (pure Go standard library)
+- No external dependencies
+
+### Optional (For Docker Testing)
+- Docker & Docker Compose
+- For visual testing with provided tester
 
 ## Usage
 
-### Standard Execution
+### Option 1: Direct Execution (Recommended)
 
 ```bash
 # From project root
@@ -83,6 +91,27 @@ guess-it-1-final/
 cd student
 go run main.go < ../data.txt
 ```
+
+### Option 2: With Docker
+
+```bash
+# Build and run
+docker compose up -d
+
+# Test with data
+docker exec -i guess-it-student sh -c "cd student && go run main.go" < data.txt
+
+# Stop
+docker compose down
+```
+
+### Option 3: With Provided Tester (Visual Testing)
+
+1. Download the guess-it-dockerized tester
+2. Copy student/ folder and script.sh to tester root
+3. Run: `docker compose up` (in tester folder)
+4. Open: http://localhost:3000/?guesser=big-range
+5. Select dataset and compare visually
 
 ### Input Format
 
