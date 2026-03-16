@@ -3,6 +3,5 @@ test_data.txt
 *.exe
 Rules.md
 idea.md
-guess-it-dockerized/
 auditor-test/
 tester.go
