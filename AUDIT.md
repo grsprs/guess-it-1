@@ -9,6 +9,8 @@
 
 ## Setup (One-time)
 
+The dockerized tester is included in the repo under `guess-it-dockerized/` with the student solution already integrated.
+
 ### 1. Start the tester
 
 ```bash

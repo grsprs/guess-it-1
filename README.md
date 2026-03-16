@@ -40,11 +40,19 @@ This program reads numbers from standard input and predicts a range `[lower, upp
 ```
 guess-it-1/
 ├── student/
-│   ├── main.go       # Main program with prediction logic
-│   ├── main_test.go  # Unit tests
-│   └── go.mod        # Go module definition
-├── script.sh         # Execution script
-└── README.md         # This file
+│   ├── main.go            # Main program with prediction logic
+│   ├── main_test.go       # Unit tests
+│   └── go.mod             # Go module definition
+├── guess-it-dockerized/   # Dockerized tester (audit-ready)
+│   ├── ai/                # Opponent binaries
+│   ├── data_sets/         # Test datasets (1-9)
+│   ├── student/           # Integrated student solution
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── server.js, index.js, index.html...
+├── script.sh              # Execution script
+├── AUDIT.md               # Audit instructions
+└── README.md              # This file
 ```
 
 ## Requirements
